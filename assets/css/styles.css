@@ -31,6 +31,8 @@
   --accent-hover: #0353e9;
   --accent-active: #002d9c;
   --accent-soft: #78a9ff;
+  --red: #da1e28;
+  --red-text: #a2191f;
 
   --ink: #161616;
   --ink-2: #525252;
@@ -551,7 +553,7 @@ a.tile::after,
   position: relative;
   overflow: hidden;
   color: #ffffff;
-  background: #0b0d1c;
+  background: #05070d;
   isolation: isolate;
 }
 
@@ -564,14 +566,14 @@ a.tile::after,
 
 .hero::before {
   z-index: -2;
-  background: url("../img/hero-1920.webp") 62% center / cover no-repeat;
+  background: url("../img/hero.svg") right center / cover no-repeat;
 }
 
 .hero::after {
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(11, 13, 28, 0.94) 0%, rgba(11, 13, 28, 0.74) 38%, rgba(11, 13, 28, 0.08) 74%),
-    linear-gradient(0deg, rgba(11, 13, 28, 0.72), rgba(11, 13, 28, 0) 42%);
+    linear-gradient(90deg, rgba(5, 7, 13, 0.94) 0%, rgba(5, 7, 13, 0.7) 36%, rgba(5, 7, 13, 0) 72%),
+    linear-gradient(0deg, rgba(5, 7, 13, 0.6), rgba(5, 7, 13, 0) 40%);
 }
 
 .hero__inner {
@@ -607,50 +609,19 @@ a.tile::after,
   margin-top: 2.5rem;
 }
 
-.facts {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid rgba(255, 255, 255, 0.22);
-}
-
-.facts div {
-  padding: 1rem 1rem 1.25rem 0;
-}
-
-.facts dt {
-  color: var(--accent-soft);
-  font-size: 0.875rem;
-}
-
-.facts dd {
-  margin-top: 0.25rem;
-  color: var(--night-ink);
-}
-
-@media (min-width: 66rem) {
-  .facts {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .facts div {
-    padding: 1.25rem 1.5rem 1.5rem;
-    border-left: 1px solid rgba(255, 255, 255, 0.22);
-  }
-
-  .facts div:first-child {
-    padding-left: 0;
-    border-left: 0;
-  }
-}
-
 @media (max-width: 41.99rem) {
-  .hero::before {
-    background-image: url("../img/hero-960.webp");
-    background-position: 70% center;
+  /* Phones: art in the upper band, text below it. */
+  .hero__inner {
+    min-height: 44rem;
   }
 
-  .facts {
-    display: none;
+  .hero::before {
+    background-size: auto 52%;
+    background-position: 82% 0;
+  }
+
+  .hero::after {
+    background: linear-gradient(0deg, rgba(5, 7, 13, 0.96) 0%, rgba(5, 7, 13, 0.9) 44%, rgba(5, 7, 13, 0) 74%);
   }
 }
 
@@ -703,6 +674,22 @@ a.tile::after,
 
 .page-hero[data-motif="interference"]::before {
   background-image: url("../img/motif-interference.svg");
+}
+
+.page-hero[data-motif="bloch"]::before {
+  background-image: url("../img/motif-bloch.svg");
+}
+
+.page-hero[data-motif="levels"]::before {
+  background-image: url("../img/motif-levels.svg");
+}
+
+.page-hero[data-motif="chirp"]::before {
+  background-image: url("../img/motif-chirp.svg");
+}
+
+.page-hero[data-motif="spectrum"]::before {
+  background-image: url("../img/motif-spectrum.svg");
 }
 
 .page-hero[data-motif="molecule"]::before {
@@ -1149,7 +1136,7 @@ a.person {
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.02em;
-  background: linear-gradient(135deg, var(--accent), #8a3ffc);
+  background: linear-gradient(135deg, var(--accent), var(--accent-active));
   border-radius: 50%;
 }
 
@@ -1335,6 +1322,23 @@ img.avatar {
   font-variant-numeric: tabular-nums;
 }
 
+.entry__detail {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--ink-3);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.entry__tag {
+  margin-bottom: 0.25rem;
+  color: var(--red-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .entry__date {
   color: var(--ink);
   font-size: 1.75rem;
@@ -1402,6 +1406,38 @@ img.avatar {
 
 .section--dark .entry__title a:hover {
   color: var(--accent-soft);
+}
+
+/* Visit photos */
+
+.gallery {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 42rem) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 66rem) {
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--rule);
+}
+
+.photo figcaption {
+  margin-top: 0.5rem;
+  color: var(--ink-2);
+  font-size: 0.875rem;
 }
 
 /* Contact */

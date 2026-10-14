@@ -9,7 +9,9 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Chase Quantum Lab | University of Illinois Chicago">
     <meta property="og:description" content="The Chase Quantum Lab at UIC works on quantum chemistry, quantum computing and algorithms, quantum and AI, quantum for energy, materials, photonics, and transduction.">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico?v=2" sizes="32x32">
+    <link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml" sizes="any">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2">
     <link rel="preload" href="assets/fonts/plex/ibm-plex-sans-latin-300.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/plex/ibm-plex-sans-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -51,12 +53,6 @@
               <a class="btn btn--ghost" href="people.html">Meet the team</a>
             </div>
           </div>
-          <dl class="facts">
-            <div><dt>Focus</dt><dd>Quantum chemistry, computing, and algorithms</dd></div>
-            <div><dt>Applications</dt><dd>Energy and AI</dd></div>
-            <div><dt>Platforms</dt><dd>1D and 2D materials, photonics, transduction</dd></div>
-            <div><dt>Funding</dt><dd>IBM, quantum chemistry project</dd></div>
-          </dl>
         </div>
       </section>
 
@@ -68,7 +64,7 @@
           </div>
           <div class="prose prose--lg">
             <p>We are the Chase Quantum Lab at the University of Illinois Chicago. Our research spans quantum chemistry, quantum computing and algorithms, quantum and AI, quantum for energy, and the materials, photonic devices, and transduction technologies that quantum systems depend on.</p>
-            <p>We combine computational design, algorithm development, spectroscopy, and experimental validation to connect discoveries to practical quantum technologies. Our quantum chemistry project is supported by active funding from IBM.</p>
+            <p>We combine computational design, algorithm development, spectroscopy, and experimental validation to connect discoveries to practical quantum technologies.</p>
           </div>
         </div>
       </section>
@@ -110,33 +106,38 @@
       <section class="section">
         <div class="wrap">
           <div class="section__head">
-            <h2>Highlights</h2>
+            <h2>Recent news</h2>
           </div>
-          <div data-render="highlights">
+          <div data-render="news">
             <noscript><p class="status">Please turn on JavaScript to see this content.</p></noscript>
           </div>
         </div>
       </section>
 
-      <section class="section section--layer">
+      <section class="section section--layer" hidden>
+        <div class="wrap">
+          <div class="section__head">
+            <div>
+              <p class="eyebrow">Visits and events</p>
+              <h2>Photos from our visits</h2>
+            </div>
+          </div>
+          <div class="gallery" data-render="gallery"></div>
+        </div>
+      </section>
+
+      <section class="section">
         <div class="wrap">
           <div class="section__head">
             <div>
               <p class="eyebrow">Partners</p>
-              <h2>Funding and collaborating organizations</h2>
-            </div>
-          </div>
-          <div class="funding" data-render="funding">
-            <div class="funding__item">
-              <p class="funding__label">Funding</p>
-              <h3 class="funding__name">IBM</h3>
-              <p class="funding__text">Active funding for our quantum chemistry project.</p>
+              <h2>Collaborating organizations</h2>
             </div>
           </div>
           <div class="tiles tiles--4" data-render="partners">
             <noscript><p class="status">Please turn on JavaScript to see this content.</p></noscript>
           </div>
-          <!-- TODO(content): add further funding acknowledgments and logos here -->
+          <!-- TODO(content): funding acknowledgments and logos can go here -->
         </div>
       </section>
 

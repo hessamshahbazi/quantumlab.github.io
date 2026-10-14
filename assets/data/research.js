@@ -11,16 +11,17 @@ LAB.research = [
     short: "Chemistry",
     name: "Quantum Chemistry",
     motif: "molecule",
-    summary:
-      "Quantum computing and computational methods for modeling molecules and chemical reactions, supported by active funding from IBM.",
+    summary: "Quantum computing and computational methods for modeling molecules and chemical reactions.",
     overview: [
       "We apply quantum computing and computational methods to quantum chemistry, including the electronic structure of molecules and the energetics of chemical reactions.",
       "Our quantum chemistry project is supported by active funding from IBM.",
     ],
     projects: [
       {
-        title: "IBM-funded quantum chemistry project",
-        body: ["Our quantum chemistry project is supported by active funding from IBM."],
+        title: "Sample-based quantum diagonalization (SQD)",
+        body: [
+          "We are exploring SQD, a hybrid quantum-classical method for estimating molecular energies, using access to IBM quantum processors.",
+        ],
       },
       {
         title: "Electronic structure on quantum computers",
@@ -117,7 +118,7 @@ LAB.research = [
     slug: "energy",
     short: "Energy",
     name: "Quantum for Energy",
-    motif: "orbits",
+    motif: "levels",
     summary:
       "Quantum methods to understand and improve the materials and chemical processes behind energy technologies.",
     overview: [
@@ -211,7 +212,7 @@ LAB.research = [
     slug: "transduction",
     short: "Transduction",
     name: "Quantum Transduction and Networks",
-    motif: "interference",
+    motif: "chirp",
     summary:
       "Converting quantum information between microwave, optical, and mechanical carriers, and building the components that link quantum systems into networks.",
     overview: [

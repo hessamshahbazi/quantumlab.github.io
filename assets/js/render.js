@@ -246,19 +246,38 @@
         .join("") + more;
   };
 
-  const highlights = (el) => {
-    el.innerHTML = `<ol class="entries">${(LAB.highlights || [])
-      .map(
-        (item) => `
+  const news = (el) => {
+    const items = (LAB.news || []).slice(0, Number(el.dataset.limit) || undefined);
+    el.innerHTML = `<ol class="entries">${items
+      .map((item) => {
+        const stamp = item.iso || (/^\d{4}$/.test(item.date) ? item.date : "");
+        const when = stamp ? `<time datetime="${esc(stamp)}">${esc(item.date)}</time>` : esc(item.date);
+        return `
       <li class="entry">
-        <p class="entry__date"><time datetime="${esc(item.date)}">${esc(item.date)}</time></p>
+        <p class="entry__date">${when}${item.detail ? `<span class="entry__detail">${esc(item.detail)}</span>` : ""}</p>
         <div>
+          ${item.tag ? `<p class="entry__tag">${esc(item.tag)}</p>` : ""}
           <h3 class="entry__title">${item.href ? `<a href="${esc(item.href)}">${esc(item.title)}</a>` : esc(item.title)}</h3>
           <p class="entry__text">${esc(item.text)}</p>
         </div>
-      </li>`
-      )
+      </li>`;
+      })
       .join("")}</ol>`;
+  };
+
+  // Photos of visits. The section around this slot is hidden in the HTML and only shown once there are photos.
+  const gallery = (el) => {
+    const photos = LAB.photos || [];
+    if (!photos.length) return;
+    el.closest("section")?.removeAttribute("hidden");
+    el.innerHTML = photos
+      .map((photo) => {
+        const img = `<img src="${esc(photo.src)}" alt="${esc(photo.alt || "")}" loading="lazy">`;
+        return `<figure class="photo">${photo.href ? `<a href="${esc(photo.href)}">${img}</a>` : img}${
+          photo.caption ? `<figcaption>${esc(photo.caption)}</figcaption>` : ""
+        }</figure>`;
+      })
+      .join("");
   };
 
   const partners = (el) => {
@@ -352,7 +371,8 @@
     contact,
     "footer-contact": footerContact,
     funding,
-    highlights,
+    gallery,
+    news,
     partners,
     people,
     profile,

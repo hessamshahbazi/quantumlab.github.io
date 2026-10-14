@@ -31,16 +31,51 @@ LAB.contact = {
   // mail: { title: "Packages and mail", address: ["Line 1", "Line 2"] },
 };
 
-// Shown on the home page, newest first.
-LAB.highlights = [
+// Recent news on the home page, newest first.
+// Fields: date (a year, or a word such as "Recent"), detail (e.g. "October 8"), iso (YYYY-MM-DD, optional),
+// tag (small label), title, text, href (optional link).
+LAB.news = [
   {
     date: "2026",
+    detail: "October 8",
+    iso: "2026-10-08",
+    tag: "Invited talk",
+    title: "Hessam Shahbazi presents at the UIC Physics Condensed Matter Seminar",
+    text: "An invited talk on interactions in two-dimensional quantum materials, from energy transport to nonlinear optical properties, covering how electrons, phonons, and excitons shape both.",
+    href: "https://phys.uic.edu/events/condensed-matter-seminar-interactions-in-two-dimensional-quantum-materials-from-energy-transport-to-nonlinear-optical-properties-with-dr-hessam-shahbazi-uic-and-northwestern/",
+  },
+  {
+    date: "Recent",
+    tag: "Resources",
+    title: "IBM quantum computer access for quantum chemistry",
+    text: "The lab received $26,000 worth of access to IBM quantum processors (QPUs) to explore sample-based quantum diagonalization (SQD), a hybrid quantum-classical method for estimating molecular energies, on quantum chemistry problems.",
+  },
+  {
+    date: "2026",
+    detail: "May 19",
+    iso: "2026-05-19",
+    tag: "In the news",
+    title: "UIC Stories: Building Future Industries",
+    text: "A UIC Stories feature on how the university prepares students for fast-growing fields includes our quantum work, with Prof. Chase and lab members Hessam Shahbazi and Mohsen Bagheri Tabar.",
+    href: "https://stories.uic.edu/all-stories/building-future-industries",
+  },
+  {
+    date: "Recent",
+    tag: "Visit",
+    title: "Photos from our recent visits",
+    text: "A photo post from the group's recent visits.",
+    href: "https://www.instagram.com/p/DXrNegRlbZO/",
+  },
+  {
+    date: "2026",
+    tag: "Visit",
     title: "Quantum Club visit to Fermilab's Quantum Garage",
     text: "Prof. Chase led UIC students on a visit to one of the country's major quantum research facilities.",
     href: "https://ece.uic.edu/news-stories/quantum-club-visits-fermilabs-quantum-garage/",
   },
   {
     date: "2025",
+    tag: "Teaching",
     title: "Quantum materials and devices course",
     text: "UIC's QISE course offerings include ECE 491: Introduction to Quantum Materials and Devices, taught by Prof. Chase.",
     href: "https://ece.uic.edu/undergraduate/quantum-courses/",
@@ -58,7 +93,12 @@ LAB.highlights = [
   },
 ];
 
-// Active funding, shown above the partners on the home page.
+// Photos of visits and events. Put image files in assets/img/visits/ and list them here;
+// the "Visits" section on the home page stays hidden until this list has entries.
+// Example: { src: "assets/img/visits/fermilab-1.jpg", alt: "Students at Fermilab", caption: "Fermilab Quantum Garage" }
+LAB.photos = [];
+
+// Active funding. Not shown on any page right now: add data-render="funding" to an element to show it.
 LAB.funding = [{ name: "IBM", text: "Active funding for our quantum chemistry project." }];
 
 // Collaborating organizations. An entry without `href` shows as a plain (non-link) tile.
