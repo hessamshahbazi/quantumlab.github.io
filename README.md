@@ -1,4 +1,4 @@
-# Chase Quantum Photonics Lab
+# Chase Quantum Lab
 
 Initial static GitHub Pages site for Prof. Zizwe Chase's quantum photonics lab at the University of Illinois Chicago.
 
