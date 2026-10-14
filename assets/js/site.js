@@ -1,42 +1,37 @@
-const header = document.querySelector("[data-header]");
-const menuButton = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".site-nav");
-const year = document.querySelector("[data-year]");
+// Interface behaviour shared by every page: mobile menu and footer year.
+(() => {
+  "use strict";
 
-function setHeaderState() {
-  const scrolled = window.scrollY > 12;
-  header?.classList.toggle("is-scrolled", scrolled);
-}
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.getElementById("site-nav");
+  const desktop = window.matchMedia("(min-width: 66rem)");
 
-function closeMenu() {
-  nav?.classList.remove("is-open");
-  header?.classList.remove("is-open");
-  document.body.classList.remove("menu-open");
-  menuButton?.setAttribute("aria-expanded", "false");
-}
+  const setOpen = (open) => {
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("menu-open", open);
+  };
 
-setHeaderState();
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => setOpen(!nav.classList.contains("is-open")));
 
-window.addEventListener("scroll", setHeaderState, { passive: true });
+    nav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setOpen(false);
+    });
 
-menuButton?.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("is-open");
-  header.classList.toggle("is-open", isOpen);
-  document.body.classList.toggle("menu-open", isOpen);
-  menuButton.setAttribute("aria-expanded", String(isOpen));
-});
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
 
-nav?.addEventListener("click", (event) => {
-  if (event.target.closest("a")) {
-    closeMenu();
+    desktop.addEventListener("change", (event) => {
+      if (event.matches) setOpen(false);
+    });
   }
-});
 
-window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeMenu();
-  }
-});
+  document.querySelectorAll("[data-year]").forEach((node) => {
+    node.textContent = new Date().getFullYear();
+  });
+})();

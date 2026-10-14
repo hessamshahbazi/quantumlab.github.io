@@ -1,339 +1,189 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="The Chase Quantum Photonics Lab at UIC develops 1D and 2D materials for quantum photonics devices, single-photon technologies, quantum communication, and quantum networks."
-    >
-    <title>Chase Quantum Photonics Lab | UIC</title>
-    <link rel="preload" href="assets/img/quantum-materials-hero.png" as="image">
+    <title>Chase Quantum Lab | University of Illinois Chicago</title>
+    <meta name="description" content="The Chase Quantum Lab at UIC works on quantum chemistry, quantum computing and algorithms, quantum and AI, quantum for energy, materials, photonics, and transduction.">
+    <meta name="theme-color" content="#161616">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chase Quantum Lab | University of Illinois Chicago">
+    <meta property="og:description" content="The Chase Quantum Lab at UIC works on quantum chemistry, quantum computing and algorithms, quantum and AI, quantum for energy, materials, photonics, and transduction.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preload" href="assets/fonts/plex/ibm-plex-sans-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/plex/ibm-plex-sans-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script>document.documentElement.className = "js";</script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="site-header" data-header>
-      <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="brand" href="#home" aria-label="Chase Quantum Photonics Lab home">
-          <span class="brand-mark" aria-hidden="true">CQ</span>
-          <span>
-            <strong>Chase Lab</strong>
-            <small>UIC Electrical & Computer Engineering</small>
-          </span>
+    <header class="masthead">
+      <div class="masthead__bar">
+        <a class="brand" href="index.html" aria-label="Chase Quantum Lab, home">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M2 12c3.4-8 6.6-8 10 0s6.6 8 10 0" fill="none" stroke="#78a9ff" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>Chase <strong>Quantum Lab</strong></span>
         </a>
-
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Menu</span>
+          <span></span><span></span><span></span><span class="sr-only">Menu</span>
         </button>
-
-        <ul class="site-nav" id="site-nav">
-          <li class="has-menu">
-            <a href="#people">People</a>
-            <ul class="sub-menu" aria-label="People subsections">
-              <li><a href="#faculty">Faculty</a></li>
-              <li><a href="#researchers">Postdocs and Researchers</a></li>
-              <li><a href="#students">Students</a></li>
-              <li><a href="#advisory">Advisory and Collaborators</a></li>
-            </ul>
-          </li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#highlights">Highlights</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li class="has-menu">
-            <a href="#seminars">Seminars and Meetings</a>
-            <ul class="sub-menu" aria-label="Seminars and meetings subsections">
-              <li><a href="#seminars">Seminars</a></li>
-              <li><a href="#meetings">Lab Meetings</a></li>
-            </ul>
-          </li>
-          <li><a href="#centers">Centers & Partners</a></li>
-        </ul>
-      </nav>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a class="site-nav__cta" href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main id="main">
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="hero-content">
-          <p class="eyebrow">Quantum materials | photonics | devices</p>
-          <h1 id="hero-title">Chase Quantum Photonics Lab</h1>
-          <p class="hero-copy">
-            Developing one-dimensional and two-dimensional materials for quantum photonic devices and deployable quantum technologies.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#research">Research Areas</a>
-            <a class="button secondary" href="mailto:chase8@uic.edu">Contact Prof. Chase</a>
-          </div>
-        </div>
-        <dl class="hero-facts" aria-label="Lab facts">
-          <div>
-            <dt>Focus</dt>
-            <dd>Single photons, entangled photons, quantum networks</dd>
-          </div>
-          <div>
-            <dt>Materials</dt>
-            <dd>Topological insulators, carbon nanotubes, 2D metamaterials</dd>
-          </div>
-          <div>
-            <dt>Home</dt>
-            <dd>University of Illinois Chicago</dd>
-          </div>
-        </dl>
-      </section>
-
-      <section class="mission section-band" aria-labelledby="mission-title">
-        <div class="section-inner two-column">
-          <div>
-            <p class="section-kicker">Mission</p>
-            <h2 id="mission-title">Materials that make quantum light useful.</h2>
-          </div>
-          <p>
-            The lab combines computational design, device fabrication concepts, spectroscopy, and experimental validation to study light-matter interactions in low-dimensional materials. Our aim is to connect material discovery to quantum photonic components for communication, sensing, networking, and information processing.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="people" aria-labelledby="people-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">People</p>
-            <h2 id="people-title">A growing quantum photonics group at UIC.</h2>
-          </div>
-
-          <div class="people-grid">
-            <article class="person-card" id="faculty">
-              <div class="person-initials" aria-hidden="true">ZC</div>
-              <div>
-                <p class="role">Faculty</p>
-                <h3>Prof. Zizwe A. Chase</h3>
-                <p>
-                  Assistant Professor in the Department of Electrical and Computer Engineering at the University of Illinois Chicago.
-                </p>
-                <ul class="compact-list">
-                  <li>Ph.D., Chemical Engineering, Washington State University</li>
-                  <li>B.S., Chemical Engineering, Georgia Institute of Technology</li>
-                  <li>B.S., Chemistry, Morehouse College</li>
-                </ul>
-                <div class="inline-links">
-                  <a href="https://ece.uic.edu/profiles/chase-zizwe/">UIC profile</a>
-                  <a href="mailto:chase8@uic.edu">chase8@uic.edu</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="info-card" id="researchers">
-              <p class="role">Postdocs and Researchers</p>
-              <h3>Research team</h3>
-              <p>
-                Current roster forthcoming. The group welcomes postdoctoral researchers, graduate researchers, undergraduate researchers, and visiting collaborators working across quantum materials and photonics.
-              </p>
-            </article>
-
-            <article class="info-card" id="students">
-              <p class="role">Students</p>
-              <h3>Prospective students</h3>
-              <p>
-                Students interested in quantum materials, photonics, semiconductor devices, spectroscopy, or computational materials design are encouraged to reach out with a short note and CV.
-              </p>
-            </article>
-
-            <article class="info-card" id="advisory">
-              <p class="role">Advisory and Collaborators</p>
-              <h3>Collaborative science</h3>
-              <p>
-                The lab is positioned for cross-disciplinary work across quantum information science, materials science, optics, chemistry, and electrical engineering.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-soft" id="research" aria-labelledby="research-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">Research</p>
-            <h2 id="research-title">Low-dimensional materials for quantum technologies.</h2>
-          </div>
-
-          <div class="research-grid">
-            <article class="research-card">
-              <span class="card-index">01</span>
-              <h3>1D and 2D Quantum Materials</h3>
-              <p>
-                Develop and characterize carbon nanotubes, topological insulators, and atomically thin platforms with optical and electronic properties suited for quantum applications.
-              </p>
-            </article>
-            <article class="research-card">
-              <span class="card-index">02</span>
-              <h3>Quantum Photonic Devices</h3>
-              <p>
-                Design device concepts for single-photon emitters, entangled photon sources, resonant nanophotonic structures, and light-matter coupling in compact materials systems.
-              </p>
-            </article>
-            <article class="research-card">
-              <span class="card-index">03</span>
-              <h3>Quantum Communication and Networks</h3>
-              <p>
-                Translate materials and photonic structures toward components that support advanced quantum communication, networked quantum systems, and scalable quantum hardware.
-              </p>
-            </article>
-            <article class="research-card">
-              <span class="card-index">04</span>
-              <h3>Computation and Validation</h3>
-              <p>
-                Use computational tools to guide materials and device design, then validate promising mechanisms through spectroscopy, photonics measurements, and experimental collaboration.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="highlights" aria-labelledby="highlights-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">Highlights</p>
-            <h2 id="highlights-title">Recent directions and milestones.</h2>
-          </div>
-
-          <div class="timeline">
-            <article>
-              <time datetime="2026">2026</time>
-              <h3><a href="https://ece.uic.edu/news-stories/quantum-club-visits-fermilabs-quantum-garage/">Quantum Club visit to Fermilab's Quantum Garage</a></h3>
-              <p>
-                Prof. Chase led UIC students on a visit to one of the country's major quantum research facilities.
-              </p>
-            </article>
-            <article>
-              <time datetime="2025">2025</time>
-              <h3><a href="https://ece.uic.edu/undergraduate/quantum-courses/">Quantum materials and devices course</a></h3>
-              <p>
-                UIC's QISE course offerings include ECE 491: Introduction to Quantum Materials and Devices, taught by Prof. Chase.
-              </p>
-            </article>
-            <article>
-              <time datetime="2023">2023</time>
-              <h3>Assistant Professor, UIC Electrical and Computer Engineering</h3>
-              <p>
-                Prof. Chase joined the UIC ECE faculty after serving as a Bridge-to-Faculty scholar in the department.
-              </p>
-            </article>
-            <article>
-              <time datetime="2023">2023</time>
-              <h3>DOE ReACT-QISE education initiative</h3>
-              <p>
-                The UIC-led consortium builds pathways for students entering quantum information science and engineering.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-soft" id="publications" aria-labelledby="publications-title">
-        <div class="section-inner">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="section-kicker">Publications</p>
-              <h2 id="publications-title">Selected papers.</h2>
+      <section class="hero">
+        <div class="wrap hero__inner">
+          <div class="hero__text">
+            <p class="eyebrow">Chase Quantum Lab &middot; University of Illinois Chicago</p>
+            <h1>Quantum science from molecules to algorithms.</h1>
+            <p class="lead">Our research spans quantum chemistry, computing, algorithms, AI, energy, materials, photonics, and transduction.</p>
+            <div class="hero__actions">
+              <a class="btn" href="research.html">Explore our research</a>
+              <a class="btn btn--ghost" href="people.html">Meet the team</a>
             </div>
-            <a class="text-link" href="https://ece.uic.edu/profiles/chase-zizwe/">More via UIC profile</a>
           </div>
-
-          <ol class="publication-list">
-            <li>
-              <strong>Terahertz Graded Index Lens for Miniaturized Implementation of the Deutsch-Jozsa Algorithm</strong>
-              <span>Optics Express, 2023</span>
-              <a href="https://doi.org/10.1364/OE.495919">DOI: 10.1364/OE.495919</a>
-            </li>
-            <li>
-              <strong>Enhancing Dicke Cooperativity in Terahertz Metasurfaces Through Ultrastrong Coupling</strong>
-              <span>Nano Letters, 2022</span>
-              <a href="https://doi.org/10.1021/acs.nanolett.2c01892">DOI: 10.1021/acs.nanolett.2c01892</a>
-            </li>
-            <li>
-              <strong>Dynamically tunable single-layer VO2/metasurface based THz cross-polarization converter</strong>
-              <span>Journal of Physics D: Applied Physics, 2021</span>
-              <a href="https://doi.org/10.1088/1361-6463/abe9df">DOI: 10.1088/1361-6463/abe9df</a>
-            </li>
-            <li>
-              <strong>Guided Mode Resonances in Flexible 2D THz Photonic Crystals</strong>
-              <span>Optica, 2020</span>
-              <a href="https://doi.org/10.1364/OPTICA.388761">DOI: 10.1364/OPTICA.388761</a>
-            </li>
-          </ol>
+          <dl class="facts">
+            <div><dt>Focus</dt><dd>Quantum chemistry, computing, and algorithms</dd></div>
+            <div><dt>Applications</dt><dd>Energy and AI</dd></div>
+            <div><dt>Platforms</dt><dd>1D and 2D materials, photonics, transduction</dd></div>
+            <div><dt>Funding</dt><dd>IBM, quantum chemistry project</dd></div>
+          </dl>
         </div>
       </section>
 
-      <section class="section" id="seminars" aria-labelledby="seminars-title">
-        <div class="section-inner two-column">
+      <section class="section">
+        <div class="wrap split">
           <div>
-            <p class="section-kicker">Seminars and Meetings</p>
-            <h2 id="seminars-title">A home for lab talks, visitors, and group meetings.</h2>
+            <p class="eyebrow">About the lab</p>
+            <h2>Connecting quantum science to real problems.</h2>
           </div>
-          <div class="stacked-panels">
-            <article class="info-card">
-              <p class="role">Seminars</p>
-              <h3>Upcoming seminar calendar</h3>
-              <p>
-                Public seminars and visitor talks will be posted here as dates are confirmed.
-              </p>
-            </article>
-            <article class="info-card" id="meetings">
-              <p class="role">Lab Meetings</p>
-              <h3>Group meeting archive</h3>
-              <p>
-                Regular group meetings support research updates, paper discussions, device design reviews, and conference preparation.
-              </p>
-            </article>
+          <div class="prose prose--lg">
+            <p>We are the Chase Quantum Lab at the University of Illinois Chicago. Our research spans quantum chemistry, quantum computing and algorithms, quantum and AI, quantum for energy, and the materials, photonic devices, and transduction technologies that quantum systems depend on.</p>
+            <p>We combine computational design, algorithm development, spectroscopy, and experimental validation to connect discoveries to practical quantum technologies. Our quantum chemistry project is supported by active funding from IBM.</p>
           </div>
         </div>
       </section>
 
-      <section class="section section-deep" id="centers" aria-labelledby="centers-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">Centers & Partners</p>
-            <h2 id="centers-title">Connected to the Chicago quantum ecosystem.</h2>
-          </div>
-
-          <div class="partner-grid">
-            <a href="https://ece.uic.edu/">UIC Electrical and Computer Engineering</a>
-            <a href="https://engineering.uic.edu/news-stories/uic-leads-national-consortium-educating-next-generation-of-quantum-engineers/">ReACT-QISE Consortium</a>
-            <a href="https://engineering.uic.edu/">UIC College of Engineering</a>
-            <a href="https://ece.uic.edu/undergraduate/quantum-courses/">UIC QISE Courses</a>
+      <section class="section section--layer" aria-label="Explore the lab">
+        <div class="wrap">
+          <div class="tiles tiles--3">
+            <a class="tile" href="research.html">
+              <h2 class="tile__title">Research</h2>
+              <p class="tile__text">Explore our research areas, from quantum chemistry and computing to materials, photonics, and transduction.</p>
+            </a>
+            <a class="tile" href="publications.html">
+              <h2 class="tile__title">Publications</h2>
+              <p class="tile__text">Read our papers and find links to the full record of the group's work.</p>
+            </a>
+            <a class="tile" href="people.html">
+              <h2 class="tile__title">People</h2>
+              <p class="tile__text">Meet the faculty, researchers, students, and collaborators behind the work.</p>
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="section-inner contact-layout">
+      <section class="section section--dark">
+        <div class="wrap">
+          <div class="section__head">
+            <div>
+              <p class="eyebrow">Research areas</p>
+              <h2>Explore our research areas.</h2>
+            </div>
+            <a class="link-arrow" href="research.html">All research</a>
+          </div>
+          <div class="panels panels--4" data-render="research-panels">
+            <noscript><p class="status">Please turn on JavaScript to see this content.</p></noscript>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section__head">
+            <h2>Highlights</h2>
+          </div>
+          <div data-render="highlights">
+            <noscript><p class="status">Please turn on JavaScript to see this content.</p></noscript>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--layer">
+        <div class="wrap">
+          <div class="section__head">
+            <div>
+              <p class="eyebrow">Partners</p>
+              <h2>Funding and collaborating organizations</h2>
+            </div>
+          </div>
+          <div class="funding" data-render="funding">
+            <div class="funding__item">
+              <p class="funding__label">Funding</p>
+              <h3 class="funding__name">IBM</h3>
+              <p class="funding__text">Active funding for our quantum chemistry project.</p>
+            </div>
+          </div>
+          <div class="tiles tiles--4" data-render="partners">
+            <noscript><p class="status">Please turn on JavaScript to see this content.</p></noscript>
+          </div>
+          <!-- TODO(content): add further funding acknowledgments and logos here -->
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="wrap cta__inner">
           <div>
-            <p class="section-kicker">Contact</p>
-            <h2 id="contact-title">Prof. Zizwe A. Chase</h2>
-            <p>
-              Department of Electrical and Computer Engineering<br>
-              University of Illinois Chicago<br>
-              851 S. Morgan St., Chicago, IL 60607
-            </p>
+            <h2>Join us!</h2>
+            <p>Students interested in quantum chemistry, quantum computing and algorithms, AI for quantum science, energy applications, quantum materials, photonics, or transduction are encouraged to reach out with a short note and CV. We also welcome postdoctoral researchers and visiting collaborators.</p>
           </div>
-          <div class="contact-actions">
-            <a class="button primary" href="mailto:chase8@uic.edu">chase8@uic.edu</a>
-            <a class="button secondary dark" href="tel:+13124131052">312.413.1052</a>
-          </div>
+          <a class="btn btn--white" href="contact.html">Contact us</a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="section-inner footer-inner">
-        <p>&copy; <span data-year></span> Chase Quantum Photonics Lab | University of Illinois Chicago</p>
-        <a href="#home">Back to top</a>
+    <footer class="footer">
+      <div class="wrap footer__grid">
+        <div>
+          <p class="footer__brand">Chase Quantum Lab</p>
+          <p>Department of Electrical and Computer Engineering, University of Illinois Chicago</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2>Pages</h2>
+          <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Contact</h2>
+          <ul data-render="footer-contact">
+            <li><a href="mailto:chase8@uic.edu">chase8@uic.edu</a></li>
+            <li><a href="tel:+13124131052">312.413.1052</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap footer__legal">
+        <p>&copy; <span data-year>2026</span> Chase Quantum Lab | University of Illinois Chicago</p>
+        <a href="#main">Back to top</a>
       </div>
     </footer>
 
+    <script src="assets/data/lab.js"></script>
+    <script src="assets/data/research.js"></script>
+    <script src="assets/js/render.js"></script>
     <script src="assets/js/site.js"></script>
   </body>
 </html>
